@@ -20,7 +20,7 @@ public class NewUserController {
         return "newuser";
     }
 
-    @PostMapping
+    @PostMapping("/newuser")
     public String newUser(@RequestParam String firstName, @RequestParam String lastName, Map<String, Object> model){
         User user = new User(firstName, lastName);
         usersListStorage.add(user);
