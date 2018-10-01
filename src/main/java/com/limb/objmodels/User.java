@@ -1,4 +1,4 @@
-package sweater.objmodels;
+package com.limb.objmodels;
 
 
 public class User {

@@ -1,4 +1,4 @@
-package sweater.controllers;
+package com.limb.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 @Controller
-public class SweaterSumController {
+public class SumServiceController {
     @GetMapping("/sum")
     public String sum(@RequestParam(defaultValue = "0") String x,
                       @RequestParam(defaultValue = "0") String y,

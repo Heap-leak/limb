@@ -1,4 +1,4 @@
-package sweater;
+package com.limb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

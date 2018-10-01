@@ -1,16 +1,16 @@
-package sweater.controllers;
+package com.limb.controllers;
 
+import com.limb.objmodels.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import sweater.objmodels.User;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 @Controller
-public class UserController {
+public class NewUserController {
 
     private List<User> usersListStorage = new ArrayList<>();
 
