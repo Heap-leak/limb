@@ -1,0 +1,5 @@
+sweater\Application.class
+sweater\controllers\UserController.class
+sweater\controllers\SweaterController.class
+sweater\objmodels\User.class
+sweater\controllers\SweaterSumController.class
