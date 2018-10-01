@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe34e193-9756-47d1-b43e-0694bc419185" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/limb/configurations/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/limb/configurations/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/limb/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/limb/configurations/MvcConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/limb/configurations/WebSecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/limb/controllers/GreetingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/limb/controllers/NewUserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/limb/controllers/SumServiceController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/login.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/limb/controllers/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/limb/controllers/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/limb/controllers/NewUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/limb/controllers/NewUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newuser.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newuser.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sweater/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sweater/controllers/SweaterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sweater/controllers/SweaterSumController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sweater/controllers/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sweater/objmodels/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/limb/objmodels/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/greeting.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/greeting.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/newuser.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/newuser.mustache" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -112,7 +88,7 @@
       <file leaf-file-name="NewUserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/limb/controllers/NewUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="595">
               <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
             </state>
           </provider>
@@ -236,7 +212,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="386" />
     <option name="width" value="1301" />
     <option name="height" value="1017" />
@@ -442,15 +418,16 @@
       <workItem from="1537877715432" duration="1743000" />
       <workItem from="1537879619710" duration="8244000" />
       <workItem from="1538379101640" duration="1212000" />
-      <workItem from="1538391316524" duration="8969000" />
+      <workItem from="1538391316524" duration="10299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36454000" />
+    <option name="totallyTimeSpent" value="37784000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -471,7 +448,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Run Dashboard" weight="0.32947975" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40115607" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40115607" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24449877" />
@@ -837,7 +814,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/limb/controllers/NewUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="595">
           <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
         </state>
       </provider>
