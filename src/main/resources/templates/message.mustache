@@ -1,0 +1,36 @@
+<html>
+<title>Message service</title>
+<body>
+<div>
+    <form action="/logout" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+<div>
+    <form method="post" action="/message">
+        <input type="text" name="text" placeholder="Input message">
+        <input type="text" name="tag" placeholder="Tag">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div>
+    <form method="post" action="searchMessage">
+        <input type="text" name="filter" placeholder="Search...">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+        <button type="submit">Filter</button>
+    </form>
+</div>
+<div>Messages List</div>
+    <div>
+        {{#messages}}
+            <div>
+                <b>{{id}}</b>
+                <span>{{text}}</span>
+                <i>{{tag}}</i>
+            </div>
+        {{/messages}}
+    </div>
+</body>
+</html>
