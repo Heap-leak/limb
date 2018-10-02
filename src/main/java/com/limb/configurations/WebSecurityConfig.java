@@ -1,23 +1,24 @@
 package com.limb.configurations;
 
 import com.limb.domain.queries.SqlQueries;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.limb.services.UserService;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-
-import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-    @Autowired
-    private DataSource dataSource;
+    //@Autowired -> Constructor
+    private final UserService userService;
+
+    public WebSecurityConfig(UserService userService) {
+        this.userService = userService;
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
@@ -35,10 +36,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.jdbcAuthentication()
-                .dataSource(dataSource)
-                .passwordEncoder(NoOpPasswordEncoder.getInstance())
-                .usersByUsernameQuery(SqlQueries.GET_USER_Q)
-                .authoritiesByUsernameQuery(SqlQueries.GET_USERS_AND_ROLES_Q);
+        auth.userDetailsService(userService)
+                .passwordEncoder(NoOpPasswordEncoder.getInstance());
+//                .usersByUsernameQuery(SqlQueries.GET_USER_Q)
+//                .authoritiesByUsernameQuery(SqlQueries.GET_USERS_AND_ROLES_Q);
     }
 }
