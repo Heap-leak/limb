@@ -13,7 +13,7 @@
     </form>
 </div>
 <div>
-    <form method="post" action="searchMessage">
+    <form method="get" action="/message">
         <input type="text" name="filter" placeholder="Search...">
         <input type="hidden" name="_csrf" value="${_csrf.token}">
         <button type="submit">Filter</button>
