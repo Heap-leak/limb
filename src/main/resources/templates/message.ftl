@@ -3,6 +3,7 @@
 <@c.page>
 <div>
     <@l.logout/>
+    <span><a href="/user">Users List</a></span>
 </div>
 <div>
     <form method="post" action="/message">
@@ -13,14 +14,14 @@
     </form>
 </div>
 <div>
-    <form method="post" action="searchMessage">
+    <form method="get" action="/message">
         <input type="text" name="filter" placeholder="Search...">
         <input type="hidden" name="_csrf" value="${_csrf.token}">
         <button type="submit">Filter</button>
     </form>
 </div>
 <div>Messages List</div>
-<#list messages as message>
+    <#list messages as message>
     <div>
         <div>
             <b>${message.id}</b>
@@ -29,5 +30,5 @@
             <strong>${message.authorName}</strong>
         </div>
     </div>
-</#list>
+    </#list>
 </@c.page>
