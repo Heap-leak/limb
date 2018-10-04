@@ -34,7 +34,7 @@ public class LoginTest {
         this.mockMvc.perform(get("/"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("Hello user")));
+                .andExpect(content().string(containsString("Hello, guest")));
     }
 
     @Test
