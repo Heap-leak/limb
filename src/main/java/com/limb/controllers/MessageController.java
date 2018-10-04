@@ -30,7 +30,7 @@ public class MessageController {
     private String uploadPath;
 
     @GetMapping("/message")
-    public String message(@RequestParam( required = false ) String filter,  Model model){
+    public String message(@RequestParam( required = false ) String filter, @AuthenticationPrincipal User user,  Model model){
         Iterable<Message> messages;
         if(filter != null && !filter.isEmpty()){
             messages = messageRepo.findByTag(filter);
@@ -39,6 +39,7 @@ public class MessageController {
         }
         model.addAttribute("messages", messages);
         model.addAttribute("filter" , filter);
+        model.addAttribute("username", user.getUsername());
         return "message";
     }
 

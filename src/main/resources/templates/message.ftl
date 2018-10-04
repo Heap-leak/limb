@@ -3,6 +3,7 @@
 <@c.page>
 <div>
     <@l.logout/>
+    <label>User: ${username}</label>
     <span><a href="/user">Users List</a></span>
 </div>
 <div>
