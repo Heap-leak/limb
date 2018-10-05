@@ -17,17 +17,9 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService implements UserDetailsService {
-
-//    @Autowired
-//    private UserRepo userRepo;
-//
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
-
     private final UserRepo userRepo;
     private final PasswordEncoder passwordEncoder;
 
-    @Autowired
     public UserService(UserRepo userRepo, PasswordEncoder passwordEncoder) {
         this.userRepo = userRepo;
         this.passwordEncoder = passwordEncoder;
