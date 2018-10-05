@@ -1,40 +1,56 @@
 <#import "parts/common.ftl" as c>
-<#import "parts/login.ftl" as l>
 <@c.page>
-<div>
-    <@l.logout/>
-    <span><a href="/user">Users List</a></span>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <form method="get" action="/message" class="form-inline">
+            <input type="text" name="filter" class="form-control" value="${filter?if_exists}" placeholder="Search...">
+            <button type="submit" class="btn btn-primary ml-2">Filter</button>
+        </form>
+    </div>
 </div>
-<div>
-    <form method="post" action="/message" enctype="multipart/form-data">
-        <input type="text" name="text" placeholder="Input message">
-        <input type="text" name="tag" placeholder="Tag">
-        <input type="file" name="file">
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <button type="submit">Submit</button>
-    </form>
+<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Add new message
+</a>
+<div class="collapse mt-1" id="collapseExample">
+    <div class="form-group mt-3">
+        <form method="post" action="/message" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" name="text" class="form-control" placeholder="Input message">
+            </div>
+            <div class="form-group">
+                <input type="text" name="tag" class="form-control" placeholder="Tag">
+            </div>
+            <div class="form-group">
+                <div class="custom-file">
+                    <input type="file" name="file" id="customFile">
+                    <label class="custom-file-label" for="customFile">Coose file</label>
+                </div>
+            </div>
+            <input type="hidden" name="_csrf" value="${_csrf.token}">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
 </div>
-<div>
-    <form method="get" action="/message">
-        <input type="text" name="filter" value="${filter?if_exists}" placeholder="Search...">
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <button type="submit">Filter</button>
-    </form>
-</div>
-<div>Messages List</div>
+<div class="card-columns">
     <#list messages as message>
-    <div>
-        <div>
-            <b>${message.id}</b>
-            <span>${message.text}</span>
-            <i>${message.tag}</i>
-            <strong>${message.authorName}</strong>
+        <div class="card my-3">
             <div>
-                <#if message.filename??>
-                    <img src="/img/${message.filename}">
-                </#if>
+            <#if message.filename??>
+                <img src="/img/${message.filename}" class="card-img-top">
+            </#if>
+            </div>
+            <div class="m-2">
+                <span>${message.text}</span>
+                <i>${message.tag}</i>
+            </div>
+            <div class="card-footer text-muted">
+                ${message.authorName}
             </div>
         </div>
-    </div>
+    <#else >
+No message
     </#list>
+</div>
 </@c.page>
