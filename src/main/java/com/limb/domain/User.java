@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.Id;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Collection;
 import java.util.Set;
 
@@ -16,8 +17,13 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @NotBlank(message = "Username cannot be empty")
     private String username;
+    @NotBlank(message = "Password cannot be empty")
     private String password;
+    @Transient //Anotation said that we no needed get or set it in DB
+    @NotBlank(message = "Password confirmation cannot be empty")
+    private String password2;
     private boolean active;
 
     @ElementCollection(targetClass = Roles.class, fetch = FetchType.EAGER)
@@ -69,6 +75,14 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+    public String getPassword2() {
+        return password2;
+    }
+
+    public void setPassword2(String password2) {
+        this.password2 = password2;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return getRoles();
@@ -93,4 +107,6 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return isActive();
     }
+
+
 }
